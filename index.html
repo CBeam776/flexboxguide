@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="images/box1.png">
+	<title>Flexbox Basics</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+<div class="container col-md-6" id="options">
+	<div class="row button-group">
+		<div class="col-md-4 buttons b-border">
+			<h4 class="text-center">Justify-Content: </h4>
+			<button type="button" class="btn btn-secondary" id="jfstart">flex-start</button>
+			<button type="button" class="btn btn-secondary" id="jfcenter">center</button>
+			<button type="button" class="btn btn-secondary" id="jfend">flex-end</button>
+			<button type="button" class="btn btn-secondary" id="jfbetween">space-between</button>
+			<button type="button" class="btn btn-secondary" id="jfaround">space-around</button>
+		</div>
+		<div class="col-md-4 buttons b-border">
+			<h4 class="text-center">Align-Items: </h4>
+			<button type="button" class="btn btn-secondary" id="aistart">flex-start</button>
+			<button type="button" class="btn btn-secondary" id="aicenter">center</button>
+			<button type="button" class="btn btn-secondary" id="aiend">flex-end</button>
+			<button type="button" class="btn btn-secondary" id="aibaseline">baseline</button>
+		</div>
+		<div class="col-md-4 buttons">
+			<h4 class="text-center">Flex-Direction: </h4>
+			<button type="button" class="btn btn-secondary" id="dr">row</button>
+			<button type="button" class="btn btn-secondary" id="dr-r">row-reverse</button>
+			<button type="button" class="btn btn-secondary" id="dc">column</button>
+			<button type="button" class="btn btn-secondary" id="dc-r">column-reverse</button>
+		</div>
+
+		<button type="button" class="btn btn-danger" id="reset">Reset</button>
+
+	</div>
+</div>
+<div class="container col-md-6" id="demo">
+	<img src="images/box1.png" alt="" class="img-responsive">
+	<img src="images/box2.jpg" alt="" class="img-responsive">
+	<img src="images/box3.png" alt="" class="img-responsive">
+</div>
+
+
+<script>
+
+// Justify-content
+$('#jfstart').click(function() {
+    $('#demo').css({
+        'justify-content': 'flex-start'
+    });
+});
+
+$('#jfcenter').click(function() {
+    $('#demo').css({
+        'justify-content': 'center'
+    });
+});
+
+$('#jfend').click(function() {
+    $('#demo').css({
+        'justify-content': 'flex-end'
+    });
+});
+
+$('#jfbetween').click(function() {
+    $('#demo').css({
+        'justify-content': 'space-between'
+    });
+});
+
+$('#jfaround').click(function() {
+    $('#demo').css({
+        'justify-content': 'space-around'
+    });
+});
+
+// Align-items
+$('#aistart').click(function() {
+    $('#demo').css({
+        'align-items': 'flex-start'
+    });
+});
+
+$('#aicenter').click(function() {
+    $('#demo').css({
+        'align-items': 'center'
+    });
+});
+
+$('#aiend').click(function() {
+    $('#demo').css({
+        'align-items': 'flex-end'
+    });
+});
+
+$('#aibaseline').click(function() {
+    $('#demo').css({
+        'align-items': 'baseline'
+    });
+});
+
+// Flex-direction
+$('#dr').click(function() {
+	$('#demo').css({
+		'flex-direction': 'row'
+	});
+});
+
+$('#dr-r').click(function() {
+	$('#demo').css({
+		'flex-direction': 'row-reverse'
+	});
+});
+
+$('#dc').click(function() {
+	$('#demo').css({
+		'flex-direction': 'column'
+	});
+});
+
+$('#dc-r').click(function() {
+	$('#demo').css({
+		'flex-direction': 'column-reverse'
+	});
+});
+
+// Reset
+$('#reset').click(function () {
+	$('#demo').css({
+		'justify-content': 'center',
+		'align-items': 'center',
+		'flex-direction': 'row'
+	});
+});
+</script>
+</body>
+</html>
