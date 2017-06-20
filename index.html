@@ -7,12 +7,16 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container col-md-6" id="options">
+<h1 class="text-center">Flexbox Visual Guide</h1>
+<p class="text-center">This website acts as a guide to the three basic properties associated with Flexbox.<br>Click through the options below to see how they affect the boxes on the right.<br>You can also click the property names to read a quick explanation of each property.
+</p>
 	<div class="row button-group">
 		<div class="col-md-4 buttons b-border">
-			<h4 class="text-center">Justify-Content: </h4>
+			<a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" title="Justify-Content" data-content="The 'justify-content' attribute gives us five options for positioning our flex-items. Click the options below to see how this property affects content."><h4 class="text-center" >Justify-Content: </h4></a>
 			<button type="button" class="btn btn-secondary" id="jfstart">flex-start</button>
 			<button type="button" class="btn btn-secondary" id="jfcenter">center</button>
 			<button type="button" class="btn btn-secondary" id="jfend">flex-end</button>
@@ -20,14 +24,14 @@
 			<button type="button" class="btn btn-secondary" id="jfaround">space-around</button>
 		</div>
 		<div class="col-md-4 buttons b-border">
-			<h4 class="text-center">Align-Items: </h4>
+			<a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" title="Align-Items" data-content="The 'align-items' property operates very similarly to the 'justify-content' property. However, it operates along the opposite axis."><h4 class="text-center">Align-Items: </h4></a>
 			<button type="button" class="btn btn-secondary" id="aistart">flex-start</button>
 			<button type="button" class="btn btn-secondary" id="aicenter">center</button>
 			<button type="button" class="btn btn-secondary" id="aiend">flex-end</button>
 			<button type="button" class="btn btn-secondary" id="aibaseline">baseline</button>
 		</div>
 		<div class="col-md-4 buttons">
-			<h4 class="text-center">Flex-Direction: </h4>
+			<a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top" title="Flex-Direction" data-content="The 'flex-direction' property allows us to choose between displaying content in rows, or columns, and also lets us reverse the order of our flex-items."><h4 class="text-center">Flex-Direction: </h4></a>
 			<button type="button" class="btn btn-secondary" id="dr">row</button>
 			<button type="button" class="btn btn-secondary" id="dr-r">row-reverse</button>
 			<button type="button" class="btn btn-secondary" id="dc">column</button>
@@ -136,6 +140,15 @@ $('#reset').click(function () {
 		'flex-direction': 'row'
 	});
 });
+
+// Popovers
+$(function () {
+  $('[data-toggle="popover"]').popover()
+});
+
+$('#example').popover(options)
+
+
 </script>
 </body>
 </html>
